@@ -11,16 +11,16 @@ module.exports = app => {
 
     const strategy = new Strategy(opts, (payload, done) => {
         Users.findByPk(payload.id)
-        .then(user => {
-            if (user) {
-                return done(null, {
-                    id: user.id,
-                    email: user.email
-                });
-            }
-            return done(null, false);
-        })
-        .catch(error => done(error, null));
+            .then(user => {
+                if (user) {
+                    return done(null, {
+                        id: user.id,
+                        email: user.email
+                    });
+                }
+                return done(null, false);
+            })
+            .catch(error => done(error, null));
     });
     
     passport.use(strategy);

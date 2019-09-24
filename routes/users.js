@@ -6,9 +6,7 @@ module.exports = (app, Users) => {
     });
     
     app.post('/users', app.auth.authenticate(), async (req, res) => {
-        const name = req.body.name;
-        const email = req.body.email;
-        const password = req.body.password;
+        const { name, email, password } = req.body;
     
         await Users.create({ name, email, password }).then(user => {
             res.json(user);
@@ -25,7 +23,6 @@ module.exports = (app, Users) => {
     
     app.put('/users/:id', app.auth.authenticate(), async (req, res) => {
         const id = parseInt(req.params.id);
-    
         const { name, email, password } = req.body;
     
         await Users.findByPk(id).then(user => {
