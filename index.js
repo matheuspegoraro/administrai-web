@@ -2,6 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
+//routes
+const siteRoutes = require('./routes/site');
+
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
