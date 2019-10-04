@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Permissıes do EJS
+// Permiss√µes do EJS
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
