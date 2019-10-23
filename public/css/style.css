@@ -300,9 +300,28 @@ h6 {
   background: #18d26e;
 }
 
+#intro .btn-go-to-login {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  color: #fff;
+  background: gray;
+}
+
 #intro .btn-get-started:hover {
   background: #fff;
   color: #18d26e;
+}
+
+#intro .btn-go-to-login:hover {
+  background: #fff;
+  color: gray;
 }
 
 /*--------------------------------------------------------------
@@ -1579,4 +1598,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   #mobile-nav-toggle {
     display: inline;
   }
+}
+
+.bg-image {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url("/img/intro-carousel/1.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 100vh; /* You must set a specified height */
+  width: 100wh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
